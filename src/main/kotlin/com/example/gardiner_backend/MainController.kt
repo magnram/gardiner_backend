@@ -19,7 +19,7 @@ class MainController {
         return "Hello, world!"
     }
 
-    @CrossOrigin(origins = ["http://localhost:3000", "https://gardiner.herokuapp.com/"])
+    @CrossOrigin
     @GetMapping("/getAll")
     fun getAll(): String {
         return Gson().toJson(listOf(gardin1, gardin2, gardin3, gardin4))
