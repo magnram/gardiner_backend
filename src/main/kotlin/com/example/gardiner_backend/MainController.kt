@@ -1,6 +1,7 @@
 package com.example.gardiner_backend
 
 import com.google.gson.Gson
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -18,6 +19,7 @@ class MainController {
         return "Hello, world!"
     }
 
+    @CrossOrigin(origins = ["http://localhost:3000", "https://gardiner.herokuapp.com/"])
     @GetMapping("/getAll")
     fun getAll(): String {
         return Gson().toJson(listOf(gardin1, gardin2, gardin3, gardin4))
