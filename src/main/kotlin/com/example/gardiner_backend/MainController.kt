@@ -19,10 +19,10 @@ class MainController {
     @CrossOrigin
     @GetMapping("/reset")
     fun reset(): String {
-        val gardin1 = Gardin(0, 100, 80, 0, 0)
-        val gardin2 = Gardin(1, 100, 80, 0, 0)
+        val gardin1 = Gardin(0, 100, 100, 0, 0)
+        val gardin2 = Gardin(1, 100, 100, 0, 0)
         val gardin3 = Gardin(2, 100, 100, 0, 0)
-        val gardin4 = Gardin(3, 100, 50, 0, 0)
+        val gardin4 = Gardin(3, 100, 100, 0, 0)
 
         gardiner = listOf(gardin1, gardin2, gardin3, gardin4)
         return "Resetted"
