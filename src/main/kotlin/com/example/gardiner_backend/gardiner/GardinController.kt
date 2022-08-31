@@ -1,14 +1,13 @@
-package com.example.gardiner_backend
+package com.example.gardiner_backend.gardiner
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.springframework.web.bind.annotation.*
-import java.lang.reflect.Type
 import java.util.*
 
 
 @RestController
-class MainController (private val gardinService: GardinService) {
+class GardinController (private val gardinService: GardinService) {
     @CrossOrigin
     @GetMapping("/reset")
     fun reset(): String {
