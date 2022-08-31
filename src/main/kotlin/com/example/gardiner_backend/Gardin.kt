@@ -1,13 +1,21 @@
 package com.example.gardiner_backend
 
-data class Gardin(
-    val id: Int,
-    val pos1: Int,
-    var pos1Destination: Int,
-    val pos2: Int,
-    var pos2Destination: Int) {
+import java.util.*
 
-    fun isActive(): Boolean {
-        return pos1 != pos1Destination || pos2 != pos2Destination;
+data class Gardin(
+    val id: UUID,
+    var pos1: Int = 100,
+    var pos1Destination: Int = 100,
+    var pos2: Int = 0,
+    var pos2Destination: Int = 0) {
+
+    fun reset() {
+        pos1 = 100
+        pos1Destination = 100
+        pos2 = 0
+        pos2Destination = 0
     }
 }
+
+data class UpdateOneInput (val id: String, val pos1Destination: Int, val pos2Destination: Int)
+
