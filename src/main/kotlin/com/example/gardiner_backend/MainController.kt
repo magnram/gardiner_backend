@@ -30,13 +30,10 @@ class MainController {
     @CrossOrigin
     @PostMapping("/updateOne")
     fun updateOne(@RequestBody input: String): String {
-        println("---")
         val updateOneInput = Gson().fromJson(input, UpdateOneInput::class.java)
         val gardin = gardiner[UUID.fromString(updateOneInput.id)]
-        println(gardin)
         gardin?.pos1Destination = updateOneInput.pos1Destination
         gardin?.pos2Destination = updateOneInput.pos2Destination
-        println(gardin)
         return Gson().toJson(gardiner.entries.map { it.value })
     }
 
@@ -47,12 +44,8 @@ class MainController {
         val updateAllInput = Gson().fromJson<List<UpdateOneInput>>(input, listType)
         updateAllInput.forEach {
             val gardin = gardiner[UUID.fromString(it.id)]
-            println(gardin)
-            println(it)
             gardin?.pos1Destination = it.pos1Destination
             gardin?.pos2Destination = it.pos2Destination
-            println(gardin)
-            println("....")
         }
         return Gson().toJson(gardiner.entries.map { it.value })
     }
