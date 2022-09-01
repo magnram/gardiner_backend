@@ -16,7 +16,7 @@ class YrController(val yrService: YrService) {
 
     @GetMapping("/getWeather")
     fun getYr(@RequestParam lng: Double, @RequestParam lat: Double): String? {
-        return yrService.getWeather(lng, lat)
+        return yrService.getWeatherUrl(lng, lat)
     }
 
 }

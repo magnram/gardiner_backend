@@ -9,9 +9,5 @@ import org.springframework.web.client.RestTemplate
 class RestClientConfiguration {
     @get:Bean
     val restTemplate: RestTemplate
-        get() {
-
-            val template = RestTemplate()
-            return template
-        }
+        get() = RestTemplate()
 }
