@@ -1,4 +1,4 @@
-package com.example.gardiner_backend
+package com.example.gardiner_backend.gardiner
 
 import java.util.*
 

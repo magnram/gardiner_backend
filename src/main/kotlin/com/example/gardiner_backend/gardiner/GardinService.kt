@@ -1,5 +1,6 @@
-package com.example.gardiner_backend
+package com.example.gardiner_backend.gardiner
 
+import com.example.gardiner_backend.Variables
 import org.springframework.stereotype.Service
 import java.util.*
 
