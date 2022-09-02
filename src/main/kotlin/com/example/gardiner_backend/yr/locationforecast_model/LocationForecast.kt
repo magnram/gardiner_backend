@@ -1,9 +1,9 @@
-package com.example.gardiner_backend.yr.model
+package com.example.gardiner_backend.yr.locationforecast_model
 
 import com.google.gson.annotations.SerializedName
 
 
-data class Yr(
+data class LocationForecast(
 
     @SerializedName("type") var type: String? = null,
     @SerializedName("geometry") var geometry: Geometry? = Geometry(),

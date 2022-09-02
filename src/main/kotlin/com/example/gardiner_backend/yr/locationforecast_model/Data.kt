@@ -1,6 +1,5 @@
-package com.example.gardiner_backend.yr.model
+package com.example.gardiner_backend.yr.locationforecast_model
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import com.google.gson.annotations.SerializedName
 
 

@@ -1,4 +1,4 @@
-package com.example.gardiner_backend.yr.model
+package com.example.gardiner_backend.yr.locationforecast_model
 
 import com.google.gson.annotations.SerializedName
 
