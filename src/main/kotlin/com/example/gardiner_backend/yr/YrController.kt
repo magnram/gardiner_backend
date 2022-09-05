@@ -24,7 +24,7 @@ class YrController(val yrService: YrService) {
     @CrossOrigin
     @GetMapping("/getWeather")
     fun getYr(@RequestParam lng: Double, @RequestParam lat: Double): String? {
-        return Gson().toJson(yrService.getWeatherUrl(lng, lat))
+        return Gson().toJson(yrService.getNowcastData(lng, lat))
     }
 
 }

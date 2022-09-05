@@ -5,13 +5,6 @@ import com.example.gardiner_backend.yr.locationforecast_model.LocationForecast
 import com.google.gson.Gson
 import org.springframework.stereotype.Service
 
-
-data class LocationDataReturnObject(
-    val symbol_url: String?,
-    val air_temperature: Double?,
-    val wind_speed: Double?
-    )
-
 data class NowcastDataReturnObject(
     val symbol_url: String?,
     val air_temperature: Double?,
@@ -38,8 +31,6 @@ class YrService(private val yrRepository: YrRepository) {
         )
     }
     */
-
-    fun get
 
     fun getNowcastData(lat: Double, lon: Double): NowcastDataReturnObject {
         val yrString = yrRepository.getFromYr(YrRepository.YrRequestType.NOWCAST, lat, lon)
